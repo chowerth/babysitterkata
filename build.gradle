@@ -1,0 +1,41 @@
+/*TODO: Refactor to Kotlin DSL */
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.50'
+    id 'org.jetbrains.dokka' version '0.10.0'
+}
+
+group 'com.ohiohealth.kata'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testImplementation "org.spekframework.spek2:spek-dsl-jvm:2.0.7"
+    testImplementation "org.jetbrains.kotlin:kotlin-test"
+    testRuntimeOnly "org.spekframework.spek2:spek-runner-junit5:2.0.7"
+    testRuntimeOnly "org.jetbrains.kotlin:kotlin-reflect:1.3.5"
+    dokkaRuntime "org.jetbrains.dokka:dokka-fatjar:0.10.0"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+test {
+    useJUnitPlatform {
+        includeEngines 'spek2'
+    }
+}
+
+dokka {
+    outputFormat = 'html'
+    outputDirectory = "$buildDir/javadoc"
+}
