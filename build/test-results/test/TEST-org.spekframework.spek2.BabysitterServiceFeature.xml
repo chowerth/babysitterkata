@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.spekframework.spek2.BabysitterServiceFeature" tests="12" skipped="0" failures="0" errors="0" timestamp="2019-10-08T02:19:40" hostname="Zero-PC" time="0.129">
+  <properties/>
+  <testcase name="When: A babysitter enters their start time before 5PM" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.068"/>
+  <testcase name="Then: it should throw invalid time error" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.006"/>
+  <testcase name="When: A babysitter enters their end time after 4AM" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.009"/>
+  <testcase name="Then: it should throw invalid time error" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.002"/>
+  <testcase name="When: A babysitter enters the bed time before their start time" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.002"/>
+  <testcase name="Then: it should throw invalid time error" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.0"/>
+  <testcase name="When: A babysitter enters an end time before midnight" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.001"/>
+  <testcase name="Then: it should throw invalid time error" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.001"/>
+  <testcase name="When: A babysitter enters a valid time" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.007"/>
+  <testcase name="Then: it should be valid input" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.0"/>
+  <testcase name="Then: it should create a valid work day" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.0"/>
+  <testcase name="Then: it should calculate the correct pay" classname="org.spekframework.spek2.BabysitterServiceFeature" time="0.013"/>
+  <system-out><![CDATA[Invalid input. All hours must be numeric and bed time must be after start time.
+Start Time (17-23) = 16 
+Bed Time (18-24) = 20 
+End Time (00-04) = 2 
+
+Invalid input. All hours must be numeric and bed time must be after start time.
+Start Time (17-23) = 17 
+Bed Time (18-24) = 20 
+End Time (00-04) = 5 
+
+Invalid input. All hours must be numeric and bed time must be after start time.
+Start Time (17-23) = 20 
+Bed Time (18-24) = 19 
+End Time (00-04) = 2 
+
+Invalid input. All hours must be numeric and bed time must be after start time.
+Start Time (17-23) = 17 
+Bed Time (18-24) = 19 
+End Time (00-04) = 22 
+
+Converted start hour: 0
+Converted bed hour: 3
+Converted end hour: 9
+Converted start time: 00:00
+Converted bed time: 03:00
+Converted end time: 09:00
+100.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
