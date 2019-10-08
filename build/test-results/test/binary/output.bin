@@ -1,0 +1,33 @@
+PInvalid input. All hours must be numeric and bed time must be after start time.
+Start Time (17-23) = 16 
+Bed Time (18-24) = 20 
+End Time (00-04) = 2 
+
+PInvalid input. All hours must be numeric and bed time must be after start time.
+Start Time (17-23) = 17 
+Bed Time (18-24) = 20 
+End Time (00-04) = 5 
+
+PInvalid input. All hours must be numeric and bed time must be after start time.
+Start Time (17-23) = 20 
+Bed Time (18-24) = 19 
+End Time (00-04) = 2 
+
+PInvalid input. All hours must be numeric and bed time must be after start time.
+Start Time (17-23) = 17 
+Bed Time (18-24) = 19 
+End Time (00-04) = 22 
+
+
+Converted start hour: 0
+
+Converted bed hour: 3
+
+Converted end hour: 9
+
+Converted start time: 00:00
+
+Converted bed time: 03:00
+
+Converted end time: 09:00
+100.0
