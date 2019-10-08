@@ -1,3 +1,5 @@
+Ohio Health babysitter kata project
+
 Build: Gradle
 Primary language: Kotlin
 Testing Framework: Spek2
